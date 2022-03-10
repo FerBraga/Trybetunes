@@ -21,10 +21,10 @@ class Login extends React.Component {
     const { value } = target;
     this.setState({
       [name]: value,
-    }, this.validationInput);
+    }, this.validation);
   }
 
-  validationInput = () => {
+  validation = () => {
     const characterMin = 3;
     const { user } = this.state;
     const name = user.length >= characterMin;
@@ -80,6 +80,5 @@ class Login extends React.Component {
     );
   }
 }
-
 
 export default Login;

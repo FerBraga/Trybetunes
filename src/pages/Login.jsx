@@ -16,7 +16,7 @@ class Login extends React.Component {
     };
   }
 
-  inputChange = ({ target }) => {
+  inputC = ({ target }) => {
     const { name } = target;
     const { value } = target;
     this.setState({
@@ -36,7 +36,7 @@ class Login extends React.Component {
     }
   }
 
-  buttonClick = async (event) => {
+  buttonC = async (event) => {
     event.preventDefault();
     const { user } = this.state;
     this.setState({
@@ -63,14 +63,14 @@ class Login extends React.Component {
                 className="inputLogin"
                 name="user"
                 value={ user }
-                onChange={ this.inputChange }
+                onChange={ this.inputC }
               />
               <button
                 type="submit"
                 data-testid="login-submit-button"
                 className="btnLogin"
                 disabled={ isBtnDisable }
-                onClick={ this.buttonClick }
+                onClick={ this.buttonC }
               >
                 Entrar
               </button>

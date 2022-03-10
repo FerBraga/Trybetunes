@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './pages/Login';
 import Search from './pages/Search';
 import Album from './pages/Album';
@@ -7,6 +7,7 @@ import Favorites from './pages/Favorites';
 import Profile from './pages/Profile';
 import ProfileEdit from './pages/ProfileEdit';
 import NotFound from './pages/NotFound';
+import './index.css';
 
 class App extends React.Component {
   render() {
@@ -14,29 +15,17 @@ class App extends React.Component {
       <main>
         <p>TrybeTunes</p>
         <BrowserRouter>
-          <Switch>
-            <Route exact path="/">
-              <Login />
-            </Route>
-            <Route path="/search">
-              <Search />
-            </Route>
-            <Route path="/album">
-              <Album />
-            </Route>
-            <Route path="/favorites">
-              <Favorites />
-            </Route>
-            <Route exact path="/profile">
-              <Profile />
-            </Route>
-            <Route exact path="/profile/edit">
-              <ProfileEdit />
-            </Route>
-            <Route path="*">
-              <NotFound />
-            </Route>
-          </Switch>
+          <BrowserRouter>
+            <Switch>
+              <Route exact path="/profile/edit" component={ ProfileEdit } />
+              <Route exact path="/album/:id" component={ Album } />
+              <Route exact path="/favorites" component={ Favorites } />
+              <Route exact path="/profile" component={ Profile } />
+              <Route exact path="/search" component={ Search } />
+              <Route exact path="/" component={ Login } />
+              <Route exact path="*" component={ NotFound } />
+            </Switch>
+          </BrowserRouter>
         </BrowserRouter>
       </main>
     );

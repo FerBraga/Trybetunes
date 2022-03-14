@@ -51,7 +51,7 @@ class Album extends React.Component {
     const { artist, albumName, tracks, isloading, tracksFav } = this.state;
     console.log(tracksFav);
     return (
-      <div data-testid="page-album">
+      <div>
         <Header />
         {isloading ? <Loading />
           : (

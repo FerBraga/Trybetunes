@@ -27,6 +27,7 @@ class Album extends React.Component {
     const { match: { params: { id } } } = this.props;
 
     const albumInfo = await musicsAPI(id);
+    console.log(albumInfo);
     const tracks = albumInfo.slice(1);
 
     this.setState({

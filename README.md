@@ -31,3 +31,17 @@ Usar o componente Redirect pra redirecionar para uma rota específica;
 
 Criar links de navegação na aplicação com o componente Link;
 
+Frontend
+
+Depois de clonar o repositório:
+
+cd src/ npm install.
+
+Executando aplicação:
+
+Para rodar o front-end:
+
+cd src/ && npm start Executando Testes Para rodar todos os testes:
+
+npm test
+
